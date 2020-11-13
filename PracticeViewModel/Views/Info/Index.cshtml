@@ -1,0 +1,43 @@
+﻿@model PracticeViewModel.Models.InfoBoard
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach(var pizza in Model.Pizzas)
+{
+<table>
+    <tr>
+        <th> Prices &nbsp</th>
+        &nbsp<td>@pizza.cost</td>
+    </tr>
+    <tr>
+        <th># slices </th>
+        <td>@pizza.slices</td>
+    </tr>
+    <tr>
+        <th>type of pizza</th>
+        <td>@pizza.type</td>
+    </tr>
+</table>
+}
+
+
+@foreach(var customer in Model.customers)
+{<table>
+    <tr>
+        <th> ID &nbsp </th>
+        &nbsp<td>@customer.ID</td>
+    </tr>
+    <tr>
+        <th>customer name </th>
+        <td>@customer.name</td>
+    </tr>
+    <tr>
+        <th>Requested by customer</th>
+        <td>@customer.request</td>
+    </tr>
+</table>
+}
+
